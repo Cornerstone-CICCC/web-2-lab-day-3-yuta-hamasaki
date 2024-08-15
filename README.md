@@ -11,7 +11,7 @@
 3. Watch the video carefully for the timing and the type of animation.
 4. Commit and push your changes once you are done.
 
-## Tips
+## Notes
 
 - Only the `.horizontal-sections` and `.section5` triggers use the `scrub` and `pin` properties.
 - Sections 1, 2, 3, and 4 animations uses `duration` and are not tied to the scroll bar.
