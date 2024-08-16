@@ -3,18 +3,18 @@ gsap.registerPlugin(ScrollTrigger);
 const topTl = gsap.timeline()
 const secTl = gsap.timeline({
   scrollTrigger:{
+    runBackwards: true,
     trigger: '.section2',
     start: "top",
-    toggleActions: "restart reverse"
+    toggleActions: "play reverse"
   }
 })
 
 const thrTl = gsap.timeline({
   scrollTrigger:{
     trigger: '.section3',
-    toggleActions: "restart none reverse pause"
+    toggleActions: "play reverse",
   },
-
 }
 )
 
@@ -28,6 +28,14 @@ const fourTl = gsap.timeline({
 }
 )
 
+const contact = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.section5',
+    start: 'top 80%',
+    end: 'top 50%',
+    scrub: true,
+  }
+})
 
 
 topTl.from(".content span:last-child", {
@@ -88,4 +96,14 @@ fourTl.from(".portfolio-item:first-child",{
   x:200,
   opacity:0,
   duration:3
+})
+
+
+contact.from(".section5 h2",{
+  y: -200,
+  opacity: 0,
+  stagger: 0.1,
+}).from('.section5 p',{
+  y:-300,
+  opacity: 0,
 })
